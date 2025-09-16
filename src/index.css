@@ -9,10 +9,10 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Tanzible Brand Colors */
-    --background: 33 15% 65%; /* #b1a496 */
-    --foreground: 0 0% 100%; /* White text */
+    --background: 45 25% 92%; /* #f0eee8 */
+    --foreground: 210 20% 25%; /* Dark text for light bg */
 
-    --card: 45 25% 92%; /* #f0eee8 */
+    --card: 33 15% 65%; /* #b1a496 */
     --card-foreground: 210 20% 25%;
 
     --popover: 45 25% 92%;
@@ -69,10 +69,10 @@ All colors MUST be HSL.
 
   .dark {
     /* Keep same color scheme for consistency */
-    --background: 33 15% 65%;
-    --foreground: 0 0% 100%;
+    --background: 45 25% 92%;
+    --foreground: 210 20% 25%;
 
-    --card: 45 25% 92%;
+    --card: 33 15% 65%;
     --card-foreground: 210 20% 25%;
 
     --popover: 45 25% 92%;

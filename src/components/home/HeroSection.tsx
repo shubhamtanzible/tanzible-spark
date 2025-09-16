@@ -30,7 +30,7 @@ export const HeroSection = () => {
         </video>
         
         {/* Video Overlay */}
-        <div className="absolute inset-0 bg-primary/60 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-primary/30 backdrop-blur-[0.5px]" />
       </div>
 
       {/* Hero Content */}
