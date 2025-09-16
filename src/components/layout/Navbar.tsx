@@ -230,7 +230,7 @@ export const Navbar = () => {
             <img
               src="/logo.png"
               alt="Tanzible Logo"
-              className="w-8 h-8 sm:w-10 sm:h-10"
+              className="w-12 h-12 sm:w-14 sm:h-14"
             />
             <Link to="/" className="text-xl sm:text-2xl font-bold text-white">
               Tanzible
