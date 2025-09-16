@@ -100,7 +100,7 @@ export const ServicesSection = () => {
               className="group relative"
             >
               {/* Service Card */}
-              <div className="h-full bg-[#b1a496] rounded-xl p-6 lg:p-8 border border-border shadow-soft hover:shadow-glow transition-all duration-500 relative overflow-hidden">
+              <div className="h-full bg-[#b1a496] bg-card/30 rounded-xl p-6 lg:p-8 border border-border shadow-soft hover:shadow-glow transition-all duration-500 relative overflow-hidden">
                 {/* Hover Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -173,7 +173,7 @@ export const ServicesSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="bg-[#b1a496] rounded-xl p-6 lg:p-8 max-w-2xl mx-auto">
+          <div className="bg-[#b1a496] bg-card/30 rounded-xl p-6 lg:p-8 max-w-2xl mx-auto">
             <h3 className="text-xl lg:text-2xl font-bold text-black mb-4">
               Ready to start your project?
             </h3>
