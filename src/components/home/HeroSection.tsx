@@ -15,7 +15,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -34,7 +34,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight"
           >
             We design &{" "}
             <span className="text-accent animate-glow-pulse">build</span> robust
@@ -75,7 +75,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-            className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4"
           >
             Launch faster, scale reliably with product-thinking.
             <br />
@@ -86,11 +86,11 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.4 }}
-            className="flex flex-col sm:flex-row gap-6 items-center justify-center"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center px-4"
           >
             <Button
               onClick={handleWhatsApp}
-              className="group bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow-lg flex items-center gap-3"
+              className="group bg-accent hover:bg-accent/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow-lg flex items-center gap-3 w-full sm:w-auto justify-center"
             >
               Book a free consult
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />

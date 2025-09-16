@@ -223,22 +223,22 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo positioned to the left corner */}
-          <img
-            src="/logo.png"
-            alt="Tanzible Logo"
-            className="w-40 h-max absolute left-4 flex items-center gap-0"
-          />{" "}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="absolute  items-center gap-0"
+            className="flex items-center gap-3 flex-shrink-0"
           >
-            {/* Logo */}
-            <Link to="/" className="text-3xl font-bold text-white">
+            <img
+              src="/logo.png"
+              alt="Tanzible Logo"
+              className="w-8 h-8 sm:w-10 sm:h-10"
+            />
+            <Link to="/" className="text-xl sm:text-2xl font-bold text-white">
               Tanzible
             </Link>
           </motion.div>
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 ml-auto">
+          <div className="hidden md:flex items-center justify-center flex-1 mx-8">
+            <div className="flex items-center space-x-6 lg:space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
@@ -294,12 +294,13 @@ export const Navbar = () => {
                 )}
               </div>
             ))}
+            </div>
           </div>
           {/* CTA Button */}
-          <div className="hidden md:flex">
+          <div className="hidden md:flex flex-shrink-0">
             <Button
               onClick={handleWhatsApp}
-              className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-glow"
+              className="bg-accent hover:bg-accent/90 text-white px-4 lg:px-6 py-2 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-glow text-sm lg:text-base"
             >
               Get Started
             </Button>
