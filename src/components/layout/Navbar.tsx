@@ -225,7 +225,7 @@ export const Navbar = () => {
           {/* Logo positioned to the left corner */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3 flex-shrink-0"
+            className="flex items-center  flex-shrink-0"
           >
             <img
               src="/logo.png"
@@ -239,61 +239,61 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center flex-1 mx-8">
             <div className="flex items-center space-x-6 lg:space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative">
-                {item.hasDropdown ? (
-                  <div
-                    className="relative"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                  >
-                    <button className="text-white hover:text-accent transition-colors duration-200 flex items-center gap-1">
-                      {item.name}
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          isServicesOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
+              {navigation.map((item) => (
+                <div key={item.name} className="relative">
+                  {item.hasDropdown ? (
+                    <div
+                      className="relative"
+                      onMouseEnter={() => setIsServicesOpen(true)}
+                      onMouseLeave={() => setIsServicesOpen(false)}
+                    >
+                      <button className="text-white hover:text-accent transition-colors duration-200 flex items-center gap-1">
+                        {item.name}
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            isServicesOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
 
-                    {/* Services Dropdown */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{
-                        opacity: isServicesOpen ? 1 : 0,
-                        y: isServicesOpen ? 0 : 10,
-                      }}
-                      className={`absolute top-full left-0 mt-2 w-56 ${
-                        isServicesOpen
-                          ? "pointer-events-auto"
-                          : "pointer-events-none"
+                      {/* Services Dropdown */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{
+                          opacity: isServicesOpen ? 1 : 0,
+                          y: isServicesOpen ? 0 : 10,
+                        }}
+                        className={`absolute top-full left-0 mt-2 w-56 ${
+                          isServicesOpen
+                            ? "pointer-events-auto"
+                            : "pointer-events-none"
+                        }`}
+                      >
+                        <div className="glass-card rounded-xl p-2 shadow-large">
+                          {services.map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.href}
+                              className="block px-4 py-3 text-sm text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`text-white hover:text-accent transition-colors duration-200 ${
+                        location.pathname === item.href ? "text-accent" : ""
                       }`}
                     >
-                      <div className="glass-card rounded-xl p-2 shadow-large">
-                        {services.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="block px-4 py-3 text-sm text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </motion.div>
-                  </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={`text-white hover:text-accent transition-colors duration-200 ${
-                      location.pathname === item.href ? "text-accent" : ""
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
           {/* CTA Button */}
