@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Play } from 'lucide-react';
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Play } from "lucide-react";
+import { useState } from "react";
 
 export const HeroSection = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919693759948', '_blank');
+    window.open("https://wa.me/919693759948", "_blank");
   };
 
   const handleVideoPlay = () => {
@@ -28,9 +28,9 @@ export const HeroSection = () => {
         >
           <source src="/assets/hero-video.mp4" type="video/mp4" />
         </video>
-        
+
         {/* Video Overlay */}
-        <div className="absolute inset-0 bg-primary/30 backdrop-blur-[0.5px]" />
+        {/* <div className="absolute inset-0 bg-primary/30 backdrop-blur-[0.5px]" /> */}
       </div>
 
       {/* Hero Content */}
@@ -42,7 +42,7 @@ export const HeroSection = () => {
           className="max-w-4xl mx-auto"
         >
           {/* Badge */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -50,8 +50,7 @@ export const HeroSection = () => {
           >
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             AI-Forward Development Studio
-          </motion.div>
-
+          </motion.div> */}
           {/* Main Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -59,11 +58,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
           >
-            We design &{' '}
-            <span className="text-accent animate-glow-pulse">
-              build
-            </span>{' '}
-            robust
+            We design &{" "}
+            <span className="text-accent animate-glow-pulse">build</span> robust
             <br />
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -74,7 +70,6 @@ export const HeroSection = () => {
               web & mobile apps
             </motion.span>
           </motion.h1>
-
           {/* Subtext */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -86,7 +81,6 @@ export const HeroSection = () => {
             <br />
             Premium development services for ambitious businesses.
           </motion.p>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -101,38 +95,15 @@ export const HeroSection = () => {
               Book a free consult
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </Button>
-            
-            <Button
+
+            {/* <Button
               variant="outline"
-              onClick={() => window.location.href = '/work'}
+              onClick={() => (window.location.href = "/work")}
               className="group glass-card border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-3"
             >
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
               See our work
-            </Button>
-          </motion.div>
-
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.6 }}
-            className="mt-16 flex flex-col items-center"
-          >
-            <p className="text-white/60 text-sm mb-6 uppercase tracking-wide">
-              Trusted by innovative companies
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-              {/* Placeholder for client logos */}
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="w-32 h-12 bg-white/10 rounded-lg flex items-center justify-center text-white/40 text-sm font-medium"
-                >
-                  Client {i}
-                </div>
-              ))}
-            </div>
+            </Button> */}
           </motion.div>
         </motion.div>
 
@@ -144,18 +115,28 @@ export const HeroSection = () => {
         />
         <motion.div
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
           className="absolute top-1/3 right-16 w-6 h-6 bg-secondary/30 rounded-full blur-sm"
         />
         <motion.div
           animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
           className="absolute bottom-1/4 left-1/4 w-3 h-3 bg-white/20 rounded-full blur-sm"
         />
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
@@ -172,7 +153,7 @@ export const HeroSection = () => {
             className="w-1 h-3 bg-white/60 rounded-full mt-2"
           />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
